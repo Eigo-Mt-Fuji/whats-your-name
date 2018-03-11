@@ -15,7 +15,7 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p build-css watch-css start-js",
     "deploy": "npm run build && gh-pages -d build",
-    "test": "NODE_ENV=test react-scripts test --env=jsdom",
+    "test": "CI=true NODE_ENV=test react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
@@ -24,23 +24,8 @@
     "babel-jest": "^22.4.1",
     "gh-pages": "^1.1.0",
     "jest": "^20.0.4",
-    "jest-cli": "^22.4.2",
     "node-sass-chokidar": "^1.1.0",
     "npm-run-all": "^4.1.2",
     "regenerator-runtime": "^0.11.1"
-  },
-  "presets": [
-    "env",
-    "react"
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        [
-          "env"
-        ],
-        "react"
-      ]
-    }
   }
 }
