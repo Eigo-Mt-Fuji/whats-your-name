@@ -4,10 +4,14 @@ import createReactClass from 'create-react-class';
 
 var SurveyQuestion = createReactClass({
 
+    getSurveyId: function() {
+
+        return this.props.id;
+    },
     render: function() {
-        let surveyQuestionId = this.props.id;
+
         let classes = 'some-class-name';
-        return (<div id={surveyQuestionId} className={classes}></div>);
+        return (<div id={this.getSurveyId()} className={classes}></div>);
     }
 })
 
