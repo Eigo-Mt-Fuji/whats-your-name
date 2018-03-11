@@ -1,7 +1,8 @@
 import React from 'react';
-import createReactClass from 'create-react-class';
 
-var Divider = createReactClass({
+import createReactClass from 'create-react-class';
+React.createClass = createReactClass;
+var Divider = React.createClass({
 
     render: function(){
 
