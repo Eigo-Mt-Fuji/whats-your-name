@@ -6,10 +6,14 @@ import './Custom.css';
 import SequenceDiagram from 'react-sequence-diagram';
  
 const input =
-  'Andrew->China: Says Hello\n' +
-  'Note right of China: China thinks\\nabout it\n' +
-  'China-->Andrew: How are you?\n' +
-  'Andrew->>China: I am good thanks!';
+  'User->Slack: Type /maskcap command\n' +
+  'Note right of Slack: send https POST request to maskcap\'s endpoint\n' +
+  'Slack->AWSLambda: JSON\n' +
+  'Note right of AWS Lambda: Get channel\'s history (https://api.slack.com/channels/history), mask, and convert to markdown \n' +
+  'Lambda API->Github: Commit via jsgit npm\n' +
+  'Github->AWSLambda: (^_^)\n' +
+  'Lambda API->Slack: JSON response\n' +
+  'Slack->User: Show result in (the user only)\n';
  
 const options = {
   theme: 'simple'
