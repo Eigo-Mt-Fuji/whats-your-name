@@ -11,7 +11,8 @@ deploy:
   provider: pages
   skip-cleanup: false
   github-token: "$GITHUB_TOKEN"
-  keep-history: false
+  keep-history: true
+  allow-empty-commit: true
   on:
     branch: master
 notifications:
