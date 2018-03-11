@@ -8,8 +8,7 @@ var Divider = React.createClass({
 
         return (
             <div className="divider">
-                ラベルの文字列
-                <hr />
+                <h2>{this.props.children}</h2><hr />
             </div>
         );
     }
