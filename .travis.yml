@@ -8,6 +8,8 @@ script:
 - npm test
 - npm run build
 deploy:
+  edge:
+    branch: v1.8.47
   provider: pages
   skip-cleanup: false
   github-token: "$GITHUB_TOKEN"
