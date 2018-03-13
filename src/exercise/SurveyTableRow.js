@@ -17,7 +17,7 @@ export default React.createClass({
     render : function() {
 
         return (
-            <div id={this.props.survey.id}>{this.props.children}</div>
+            <div className='SurveyTableRow' id={this.props.survey.id}>{this.props.survey.name}</div>
         );
     }
 });
