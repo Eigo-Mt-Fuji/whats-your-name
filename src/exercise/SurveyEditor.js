@@ -1,5 +1,13 @@
 import React from 'react';
 
+
+class DraggableQuestions extends React.Component {
+
+    render() {
+
+        return (<div className={this.props.className}>{this.props.children}</div>)
+    }
+}
 export default class SurveyEditor extends React.Component {
 
     handleDragOver() {
@@ -11,7 +19,7 @@ export default class SurveyEditor extends React.Component {
             <div className='row'>
                 <aside className='sidebar col-md-3'>
                     <h2>サーベイの部品</h2>
-                    <DraggableQuestions/>
+                    <DraggableQuestions className="sidebar-draggable">Drag Please</DraggableQuestions>
                 </aside>
             </div>
             <div className='survey-canvas col-md-9'>

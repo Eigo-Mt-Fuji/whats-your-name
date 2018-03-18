@@ -4,6 +4,7 @@ import './App.css';
 import './Custom.css';
 
 import SequenceDiagram from 'react-sequence-diagram';
+import ApiHelper from "./exercise/ApiHelper";
  
 const input =
   'User->Slack: Type /maskcap command\n' +
@@ -38,6 +39,14 @@ class App extends Component {
         </p>
       </div>
     );
+  };
+  componentDidMount() {
+
+      let helper = new ApiHelper("/ip.json");
+      helper.get().then((json)=>{
+
+          console.log("Response", json);
+      });
   }
 }
 
