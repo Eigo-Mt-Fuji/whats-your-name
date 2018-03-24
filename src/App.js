@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import SequenceDiagram from 'react-sequence-diagram';
-import ApiHelper from "./ApiHelper";
+// import ApiHelper from "./ApiHelper";
 
 const input =
     'User->Slack: Type /maskcap command\n' +
