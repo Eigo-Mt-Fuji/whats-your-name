@@ -6,6 +6,11 @@ cache:
   - node_modules
 script:
   - npm test
+after_success:
+  - git config --global user.name "efg.river"
+  - git config --global user.email "efg.river@gmail.com"
+  - git remote rm origin
+  - git remote add origin https://efg.river:${GITHUB_TOKEN}@github.com/Eigo-Mt-Fuji/whats-your-name.git
   - if [ $TRAVIS_BRANCH=="master" ]; then npm run deploy ;fi
 notifications:
   slack:
