@@ -5,8 +5,8 @@ cache:
   directories:
   - node_modules
 script:
-- npm test
-- if [ $TRAVIS_BRANCH = 'master' ]; then npm run deploy fi
+  - npm test
+  - if [ $TRAVIS_BRANCH=="master" ]; then npm run deploy ;fi
 notifications:
   slack:
     rooms:
