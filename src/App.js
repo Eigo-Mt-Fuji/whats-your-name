@@ -38,7 +38,7 @@ class App extends Component {
                 </header>
                 <SequenceDiagram input={input} options={options} onError={onError}/>
                 <p className="App-intro">
-                    こんにちは。
+                    はじめまして。
                 </p>
                 <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
                     <MyPaper></MyPaper>
