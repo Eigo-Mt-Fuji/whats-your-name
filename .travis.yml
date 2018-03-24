@@ -7,16 +7,6 @@ cache:
 script:
 - npm test
 - if [ $TRAVIS_BRANCH = 'master' ]; then npm run deploy fi
-deploy:
-  edge:
-    branch: v1.8.47
-  provider: pages
-  skip-cleanup: false
-  github-token: "$GITHUB_TOKEN"
-  keep-history: true
-  allow-empty-commit: true
-  on:
-    branch: master
 notifications:
   slack:
     rooms:
