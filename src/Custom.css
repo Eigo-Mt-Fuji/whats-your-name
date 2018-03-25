@@ -1,4 +1,6 @@
 @charset "UTF-8";
 /* ファイルパス : ~/Documents/git/whats-your-name/src/Custom.sass */
 body {
-  background: '#ffffff'; }
+  background-color: black;
+  width: 100%;
+  height: 100%; }
