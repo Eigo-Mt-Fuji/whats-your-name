@@ -4,15 +4,17 @@
   "private": true,
   "homepage": "https://eigo-mt-fuji.github.io/whats-your-name",
   "dependencies": {
+    "ajv": "^6.0.0",
     "create-react-class": "^15.6.3",
+    "jsdom": "^11.6.2",
     "material-ui": "^0.20.0",
     "npm": "^5.8.0",
     "prop-types": "^15.6.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1",
+    "react": "^16.3.0",
+    "react-css-grid": "^2.0.0-0",
+    "react-scripts-babel-7": "2.0.5",
     "react-sequence-diagram": "0.0.11",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.4"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
@@ -21,17 +23,49 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p build-css watch-css start-js",
     "deploy": "npm run build && gh-pages -d build",
-    "test": "CI=true NODE_ENV=test react-scripts test --env=jsdom",
+    "test": "ava -v",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "babel-core": "6.0.0",
-    "babel-jest": "^22.4.1",
+    "@ava/babel-preset-stage-4": "2.0.0-beta.4",
+    "@babel/core": "7.0.0-beta.42",
+    "@babel/preset-react": "7.0.0-beta.42",
+    "@babel/runtime": "7.0.0-beta.42",
+    "ava": "^1.0.0-beta.3",
+    "@babel/plugin-transform-react-jsx": "7.0.0-beta.42",
+    "@babel/plugin-transform-runtime": "7.0.0-beta.42",
+    "@babel/plugin-proposal-pipeline-operator": "7.0.0-beta.42",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.42",
+    "@babel/plugin-transform-modules-commonjs": "7.0.0-beta.42",
+    "@babel/plugin-proposal-class-properties": "7.0.0-beta.42",
+    "babel-plugin-css-modules-transform": "1.5.0",
+    "@babel/preset-env": "7.0.0-beta.42",
+    "@babel/register": "7.0.0-beta.42",
+    "@babel/polyfill": "7.0.0-beta.42",
+    "babel-jest": "latest",
+    "jest": "latest",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^7.2.1",
+    "eslint": "4.19.1",
+    "eslint-plugin-flowtype": "2.46.1",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.7.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "gh-pages": "^1.1.0",
-    "jest": "^20.0.4",
     "minimatch": "3.0.2",
-    "node-sass-chokidar": "^1.1.0",
+    "node-sass-chokidar": "^1.2.2",
     "npm-run-all": "^4.1.2",
-    "regenerator-runtime": "^0.11.1"
+    "react-addons-test-utils": "16.0.0-alpha.3",
+    "react-dom": "^16.3.0",
+    "jsdom-global": "^2.1.1",
+    "webpack": "3.1.0",
+    "file-loader": "1.1.11"
+  },
+  "ava": {
+    "require": "./src/helpers/setup-browser-test.js",
+    "testOptions": {
+      "babelrc": true
+    }
   }
 }

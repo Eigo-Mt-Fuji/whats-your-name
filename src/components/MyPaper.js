@@ -26,12 +26,6 @@ export default class MyPaper extends React.Component {
                 }>
 
                 </SequenceDiagramWrapper>
-                <div style={chip_wrapper_style}>
-                    {/*<Chip labelColor={lightBlack}><Avatar backgroundColor={green50} src="images/uxceo-128.jpg"></Avatar>Test1</Chip>*/}
-                    {/*<Chip labelColor={lightBlack}><Avatar backgroundColor={green50} src="images/uxceo-128.jpg"></Avatar>Test2</Chip>*/}
-                    {/*<Chip labelColor={lightBlack}><Avatar backgroundColor={green50} src="images/uxceo-128.jpg"></Avatar>Test3</Chip>*/}
-                    {/*<Chip labelColor={lightBlack}><Avatar backgroundColor={green50} src="images/uxceo-128.jpg"></Avatar>Test4</Chip>*/}
-                </div>
             </Paper>
         );
     }
