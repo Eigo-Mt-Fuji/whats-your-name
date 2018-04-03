@@ -9,11 +9,12 @@ export default class MyAvatar extends React.Component {
         age:""
     };
     render() {
-
+        // 横幅が664(320 * 2(number of div) + (2(number of div) - 1) * 24) を超えたら回りこみ
         return (
-            <Grid width={320} gap={24}>
+
+            <Grid width={160} gap={5}>
                 <div>
-                    <img src={"./images/uxceo-128.jpg"}/>
+                    <img src={this.props.src}/>
                 </div>
                 <div><span>{ this.props.name }</span>(<span>{ this.props.age }</span>)</div>
             </Grid>
