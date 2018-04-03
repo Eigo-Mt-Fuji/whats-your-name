@@ -1,19 +1,19 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import Chip from 'material-ui/Chip';
-import Avatar from 'material-ui/Avatar';
-import {green50, lightBlack} from 'material-ui/styles/colors';
 import SequenceDiagramWrapper from './SequenceDiagramWrapper';
+import MyAvatar from "./MyAvatar";
 
 export default class MyPaper extends React.Component {
 
 
     render() {
 
-        let chip_wrapper_style = { display:'flex', flexWrap: 'wrap', width: '100%', height: '100%' }
         return (
             <Paper zDepth={1} rounded={false}>
-                {this.props.children}
+                <div>
+                    {this.props.children}
+                </div>
+                <MyAvatar age={30} name={"袖下英吉郎"} src={"./images/avatar.jpg"}></MyAvatar>
                 <SequenceDiagramWrapper diagramText={
                     'You->This Site: Choose Introduction\n' +
                     'This Site->You: My summary profile \n' +

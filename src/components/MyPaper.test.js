@@ -7,12 +7,17 @@ Enzyme.configure({ adapter: new Adapter() });
 
 import '@babel/register';
 import MyPaper from "./MyPaper";
+import MyAvatar from "./MyAvatar";
 import SequenceDiagramWrapper from './SequenceDiagramWrapper';
 
 test('render MyPaper without crash', (t) => {
 
     let obj = Enzyme.shallow(<MyPaper>test</MyPaper>);
-    t.is(obj.contains(<Paper zDepth={1} rounded={false}>test<SequenceDiagramWrapper diagramText={
+    t.is(obj.contains(
+        <Paper zDepth={1} rounded={false}>
+            <div>test</div>
+            <MyAvatar age={30} name={"袖下英吉郎"} src={"./images/avatar.jpg"}></MyAvatar>
+            <SequenceDiagramWrapper diagramText={
         'You->This Site: Choose Introduction\n' +
         'This Site->You: My summary profile \n' +
         'Note right of You: More detail , About me\n' +
