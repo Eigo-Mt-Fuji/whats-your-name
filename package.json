@@ -23,25 +23,37 @@
     "start-js": "react-scripts start",
     "start": "npm-run-all -p build-css watch-css start-js",
     "deploy": "npm run build && gh-pages -d build",
-    "test": "ava -v",
+    "test": "BABEL_ENV=test NODE_ENV=test ava -v",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@ava/babel-preset-stage-4": "2.0.0-beta.4",
-    "@babel/core": "7.0.0-beta.42",
-    "@babel/preset-react": "7.0.0-beta.42",
-    "@babel/runtime": "7.0.0-beta.42",
     "ava": "^1.0.0-beta.3",
-    "@babel/plugin-transform-react-jsx": "7.0.0-beta.42",
-    "@babel/plugin-transform-runtime": "7.0.0-beta.42",
-    "@babel/plugin-proposal-pipeline-operator": "7.0.0-beta.42",
-    "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.42",
-    "@babel/plugin-transform-modules-commonjs": "7.0.0-beta.42",
-    "@babel/plugin-proposal-class-properties": "7.0.0-beta.42",
+    "@ava/babel-preset-stage-4": "2.0.0-beta.4",
+    "@babel/core": "7.0.0-beta.44",
+    "@babel/preset-react": "7.0.0-beta.44",
+    "@babel/runtime": "7.0.0-beta.44",
+    "@babel/plugin-transform-react-jsx": "7.0.0-beta.44",
+    "@babel/plugin-transform-runtime": "7.0.0-beta.44",
+    "@babel/plugin-proposal-pipeline-operator": "7.0.0-beta.44",
+    "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.44",
+    "@babel/plugin-transform-modules-commonjs": "7.0.0-beta.44",
+    "@babel/plugin-proposal-class-properties": "7.0.0-beta.44",
+    "@babel/plugin-transform-classes": "7.0.0-beta.44",
+    "@babel/plugin-transform-destructuring": "7.0.0-beta.44",
+    "@babel/plugin-transform-regenerator": "7.0.0-beta.44",
+    "@babel/preset-env": "7.0.0-beta.44",
+    "@babel/register": "7.0.0-beta.44",
+    "@babel/polyfill": "7.0.0-beta.44",
+    "@babel/preset-flow": "7.0.0-beta.44",
+    "@babel/plugin-syntax-flow": "7.0.0-beta.44",
+    "@babel/plugin-transform-flow-strip-types": "7.0.0-beta.44",
+    "@babel/plugin-transform-react-constant-elements": "7.0.0-beta.44",
+    "@babel/plugin-transform-react-display-name": "7.0.0-beta.44",
+    "babel-plugin-macros": "2.2.0",
     "babel-plugin-css-modules-transform": "1.5.0",
-    "@babel/preset-env": "7.0.0-beta.42",
-    "@babel/register": "7.0.0-beta.42",
-    "@babel/polyfill": "7.0.0-beta.42",
+    "babel-plugin-transform-dynamic-import": "2.0.0",
+    "babel-preset-react-app-babel-7": "4.0.1",
+    "babel-preset-react-app": "next",
     "babel-jest": "latest",
     "jest": "22.1.1",
     "babel-core": "7.0.0-bridge.0",
@@ -67,5 +79,18 @@
     "testOptions": {
       "babelrc": true
     }
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
   }
 }

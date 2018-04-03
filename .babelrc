@@ -5,7 +5,7 @@
         "node": "current"
       }
     }]
-    , "@babel/preset-react"
+    , "babel-preset-react-app-babel-7"
   ],
   "plugins": [
     "@babel/plugin-transform-runtime",
