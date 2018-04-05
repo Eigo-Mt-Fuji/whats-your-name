@@ -16,7 +16,7 @@ export default class MyAvatar extends React.Component {
     return (
       <Grid width={160} gap={5}>
         <div>
-          <img alt="avatar image" src={this.props.src}/>
+          <img alt="avatar" src={this.props.src}/>
         </div>
         <div><span>{this.props.name}</span>(<span>{this.props.age}</span>)</div>
       </Grid>
