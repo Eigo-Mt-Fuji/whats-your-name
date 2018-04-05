@@ -5,6 +5,7 @@ cache:
   directories:
   - node_modules
 script:
+  - npm info @babel/plugin-syntax-dynamic-import versions
   - npm run lint
   - npm run test
 after_success:
