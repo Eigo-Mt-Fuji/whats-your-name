@@ -14,22 +14,7 @@
     "react-css-grid": "^2.0.0-0",
     "react-scripts-babel-7": "2.0.5",
     "react-sequence-diagram": "0.0.11",
-    "whatwg-fetch": "^2.0.4"
-  },
-  "scripts": {
-    "build-css": "node-sass-chokidar src/ -o src/",
-    "build": "npm run build-css && react-scripts build",
-    "watch-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p build-css watch-css start-js",
-    "deploy": "npm run build && gh-pages -d build",
-    "test": "BABEL_ENV=test NODE_ENV=test ava",
-    "lint": "eslint --fix src/**/*.js src/**/*.js",
-    "watch:test": "BABEL_ENV=test NODE_ENV=test ava --watch",
-    "eject": "react-scripts eject",
-    "precommit": "npm run lint"
-  },
-  "devDependencies": {
+    "whatwg-fetch": "^2.0.4",
     "@babel/core": "7.0.0-beta.44",
     "@babel/plugin-proposal-class-properties": "7.0.0-beta.44",
     "@babel/plugin-proposal-pipeline-operator": "7.0.0-beta.44",
@@ -47,7 +32,22 @@
     "@babel/polyfill": "7.0.0-beta.44",
     "@babel/preset-env": "7.0.0-beta.44",
     "@babel/preset-flow": "7.0.0-beta.44",
-    "@babel/preset-react": "7.0.0-beta.44",
+    "@babel/preset-react": "7.0.0-beta.44"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "build": "npm run build-css && react-scripts build",
+    "watch-css": "node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p build-css watch-css start-js",
+    "deploy": "npm run build && gh-pages -d build",
+    "test": "BABEL_ENV=test NODE_ENV=test ava",
+    "lint": "eslint --fix src/**/*.js src/**/*.js",
+    "watch:test": "BABEL_ENV=test NODE_ENV=test ava --watch",
+    "eject": "react-scripts eject",
+    "precommit": "npm run lint"
+  },
+  "devDependencies": {
     "@babel/register": "7.0.0-beta.44",
     "@babel/runtime": "7.0.0-beta.44",
     "ava": "^1.0.0-beta.3",
