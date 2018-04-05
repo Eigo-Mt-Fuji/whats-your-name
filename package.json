@@ -59,8 +59,6 @@
     "babel-plugin-transform-dynamic-import": "2.0.0",
     "babel-preset-react-app": "next",
     "babel-preset-react-app-babel-7": "4.0.1",
-    "canvas": "^1.6.10",
-    "canvas-prebuilt": "^1.6.5-prerelease.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "4.15.0",
