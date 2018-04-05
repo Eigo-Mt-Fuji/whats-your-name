@@ -10,9 +10,6 @@ export default class MyPaper extends React.Component {
   static propTypes={
     children: PropTypes.any.isRequired
   }
-  constructor () {
-    super();
-  }
   render () {
     //console.log(this.props.children);
     return (

@@ -10,11 +10,6 @@ export default class MyAvatar extends React.Component {
     name: PropTypes.string.isRequired,
     age: PropTypes.number.isRequired,
   };
-  constructor (props) {
-    super(props);
-
-    this.props = props;
-  }
 
   render () {
     // 横幅が664(320 * 2(number of div) + (2(number of div) - 1) * 24) を超えたら回りこみ

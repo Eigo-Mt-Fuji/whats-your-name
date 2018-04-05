@@ -11,10 +11,6 @@ export default class SequenceDiagramWrapper extends React.Component {
         diagramText: PropTypes.string.isRequired,
         theme:PropTypes.string.isRequired
     };
-
-    constructor() {
-        super();
-    }
     onError(error) {
         console.log(error);
     }
