@@ -26,7 +26,8 @@
     "test": "BABEL_ENV=test NODE_ENV=test ava -v",
     "lint": "eslint --fix src/**/*.js src/**/*.js",
     "watch:test": "BABEL_ENV=test NODE_ENV=test ava --watch",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "npm run lint"
   },
   "devDependencies": {
     "@ava/babel-preset-stage-4": "2.0.0-beta.4",
