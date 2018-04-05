@@ -5,8 +5,10 @@ extends:
   - plugin:import/errors
   - plugin:import/warnings
   - plugin:react/recommended
+  - plugin:jsx-a11y/recommended
 plugins:
   - babel
+  - jsx-a11y
 rules:
   quotes: [1, "double", "avoid-escape"]
   semi: ["error", "always"]
