@@ -10,13 +10,13 @@ import MyPaper from "./MyPaper";
 Enzyme.configure({adapter: new Adapter()});
 
 test("render MyPaper without crash", (t) => {
-  let obj = Enzyme.shallow(
+  let obj = Enzyme.mount(
     <MyPaper>test</MyPaper>,
     {
       // context: {muiTheme},
       // childContextTypes: {muiTheme: PropTypes.object}
     }
   );
-  t.true(obj.type().name == "Paper");
+  t.true(obj.type().name == "MyPaper");
   t.pass();
 });

@@ -16,7 +16,7 @@ export default class MyPaper extends React.Component {
   render () {
     //console.log(this.props.children);
     return (
-      <Paper zDepth={1} rounded={false}>
+      <Paper zdepth={1} rounded={"false"}>
         <Grid width={200} gap={5}>
           <div>{this.props.children}</div>
           <div>

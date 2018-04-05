@@ -1,24 +1,23 @@
-import React from 'react';
-import './App.css';
-import './Custom.css';
-import MyPaper from './components/MyPaper';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import React from "react";
+import "./App.css";
+import "./Custom.css";
+import MyPaper from "./components/MyPaper";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import createMuiTheme from "material-ui/styles/createMuiTheme";
 
 class App extends React.Component {
   render () {
     return (
       <div className="App">
 
-        <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+        <MuiThemeProvider theme={createMuiTheme({palette: {type: "light"}})}>
           <MyPaper>
-            <div className="App-intro" style={{width: '100%'}}>{"You're welcome, here."}</div>
+            <div className="App-intro" style={{width: "100%"}}>{"You're welcome, here."}</div>
           </MyPaper>
         </MuiThemeProvider>
       </div>
-    )
-  };
+    );
+  }
 
   // componentDidMount() {
   //

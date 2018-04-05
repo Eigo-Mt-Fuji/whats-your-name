@@ -1,4 +1,4 @@
-import 'whatwg-fetch';
+import "whatwg-fetch";
 
 export default class ApiHelper {
   constructor (base_url) {
@@ -10,6 +10,6 @@ export default class ApiHelper {
       credentials: "same-origin"
     }).then((response) => {
       return response.json();
-    })
+    });
   }
-};
+}
