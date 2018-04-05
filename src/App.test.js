@@ -13,10 +13,11 @@ Enzyme.configure({adapter: new Adapter()});
 const muiTheme = createMuiTheme({palette: {type: "light"}});
 
 test("renders without crashing", t => {
-  let app = Enzyme.shallow((<App/>),     {
+  let app = Enzyme.shallow((<App/>), {
     context: {muiTheme},
     childContextTypes: {muiTheme: PropTypes.object}
   });
+  
   t.is(app.find(".App").length, 1);
   t.pass();
 });

@@ -21,10 +21,13 @@ class App extends React.Component {
 
   componentDidMount() {
   
-    let helper = new ApiHelper("/ip.json");
+    let helper = new ApiHelper("../public/ip.json");
     helper.get().then((json) => {
     
-      console.log("Response", json);
+      console.log("Response is", json);
+    }).catch((e) => {
+      console.log("Error args: ", e);
+      console.error("Error");
     });
   }
 }
