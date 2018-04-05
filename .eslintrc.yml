@@ -1,0 +1,25 @@
+---
+
+extends:
+  - eslint:recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:react/recommended
+plugins:
+  - babel
+rules:
+  quotes: [1, "double", "avoid-escape"]
+  no-console: 0
+  no-trailing-spaces: 2
+  babel/new-cap: 1
+  babel/no-invalid-this: 1
+  babel/object-curly-spacing: 1
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
+    modules: true
+parser: babel-eslint
+env:
+  node: true
+  es6: true
