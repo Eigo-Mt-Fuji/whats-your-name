@@ -1,6 +1,7 @@
 /* eslint-env browser */
 const {JSDOM} = require("jsdom");
-
+global.XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+global.raf = require("raf/polyfill");
 // init jsdom
 const jsdom = new JSDOM(
   '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head></head><body></body></html>',
@@ -26,7 +27,3 @@ global.navigator = {
 };
 
 copyProps(window, global);
-
-global.requestAnimationFrame = (cb) => {
-  setTimeout(cb, 0);
-};
