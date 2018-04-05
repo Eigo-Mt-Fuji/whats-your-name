@@ -4,7 +4,7 @@ import Grid from "react-css-grid";
 import PropTypes from "prop-types";
 
 export default class MyAvatar extends React.Component {
-  
+
   static propTypes ={
     src: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
