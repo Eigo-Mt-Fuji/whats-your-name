@@ -9,11 +9,13 @@ plugins:
   - babel
 rules:
   quotes: [1, "double", "avoid-escape"]
+  semi: ["error", "always"]
   no-console: 0
   no-trailing-spaces: 2
   babel/new-cap: 1
   babel/no-invalid-this: 1
   babel/object-curly-spacing: 1
+
 parserOptions:
   sourceType: module
   ecmaFeatures:

@@ -1,43 +1,45 @@
-import React from 'react';
-import SequenceDiagram from 'react-sequence-diagram';
-
+import React from "react";
+import SequenceDiagram from "react-sequence-diagram";
+import PropTypes from "prop-types";
 export default class SequenceDiagramWrapper extends React.Component {
 
-    props = {
+    static defaultProps= {
+      diagramText: "",
+      theme: ""
+    };
+    static propTypes= {
+        diagramText: PropTypes.string.isRequired,
+        theme:PropTypes.string.isRequired
+    };
 
-        diagramText: '',
-        theme: ''
-    };
-    constructor(diagramText) {
+    constructor() {
         super();
-        
-        this.props.theme = 'hand';
-    };
+    }
     onError(error) {
         console.log(error);
-    };
+    }
 
     componentWillMount() {
 
-        console.log("SequenceDiagramWrapper.componentWillMount input=" + this.props.diagramText);
-    };
+//        console.log("SequenceDiagramWrapper.componentWillMount input=" + this.props.diagramText);
+    }
 
     render() {
 
         let style = {
 
-            width: '100%',
-            height: '100%'
+            width: "100%",
+            height: "100%"
         };
 
         return (
             <SequenceDiagram style={style} input={this.props.diagramText} options={{theme: this.props.theme}} onError={this.onError}/>
-        )
-    };
+        );
+    }
 
     componentDidMount() {
 
-        console.log("SequenceDiagramWrapper.componentWillMount input=" + this.props.diagramText);
-    };
+//        console.log("SequenceDiagramWrapper.componentWillMount input=" + this.props.diagramText);
+    }
 
-} ;
+}

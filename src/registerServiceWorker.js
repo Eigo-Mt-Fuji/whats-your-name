@@ -18,7 +18,7 @@ const isLocalhost = Boolean(
     )
 );
 
-export default function register() {
+export default function register () {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location);
@@ -43,7 +43,7 @@ export default function register() {
             'This web app is being served cache-first by a service ' +
               'worker. To learn more, visit https://goo.gl/SC7cgQ'
           );
-        });
+        })
       } else {
         // Is not local host. Just register service worker
         registerValidSW(swUrl);
@@ -52,7 +52,7 @@ export default function register() {
   }
 }
 
-function registerValidSW(swUrl) {
+function registerValidSW (swUrl) {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
@@ -74,14 +74,14 @@ function registerValidSW(swUrl) {
             }
           }
         };
-      };
+      }
     })
     .catch(error => {
       console.error('Error during service worker registration:', error);
-    });
+    })
 }
 
-function checkValidServiceWorker(swUrl) {
+function checkValidServiceWorker (swUrl) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl)
     .then(response => {
@@ -94,7 +94,7 @@ function checkValidServiceWorker(swUrl) {
         navigator.serviceWorker.ready.then(registration => {
           registration.unregister().then(() => {
             window.location.reload();
-          });
+          })
         });
       } else {
         // Service worker found. Proceed as normal.
@@ -105,13 +105,13 @@ function checkValidServiceWorker(swUrl) {
       console.log(
         'No internet connection found. App is running in offline mode.'
       );
-    });
+    })
 }
 
-export function unregister() {
+export function unregister () {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.ready.then(registration => {
       registration.unregister();
-    });
+    })
   }
 }
