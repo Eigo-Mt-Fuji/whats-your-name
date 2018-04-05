@@ -14,6 +14,7 @@
     "react-css-grid": "^2.0.0-0",
     "react-scripts-babel-7": "2.0.5",
     "react-sequence-diagram": "0.0.11",
+    "css-loader": "0.28.11",
     "whatwg-fetch": "^2.0.4",
     "@babel/core": "7.0.0-beta.44",
     "@babel/plugin-proposal-class-properties": "7.0.0-beta.44",
