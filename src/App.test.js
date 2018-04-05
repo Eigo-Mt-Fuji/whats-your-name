@@ -9,7 +9,8 @@ import "@babel/register";
 
 import App from "./App";
 Enzyme.configure({adapter: new Adapter()});
-const muiTheme=createMuiTheme({palette: {type: "light"}});
+
+const muiTheme = createMuiTheme({palette: {type: "light"}});
 
 test("renders without crashing", t => {
   let app = Enzyme.shallow((<App/>),     {

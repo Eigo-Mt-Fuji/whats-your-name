@@ -6,12 +6,14 @@ import Grid from "react-css-grid";
 import PropTypes from "prop-types";
 
 export default class MyPaper extends React.Component {
-
-  static propTypes={
+  
+  static propTypes = {
+    
     children: PropTypes.any.isRequired
-  }
-  render () {
-    //console.log(this.props.children);
+  };
+  
+  render() {
+    
     return (
       <Paper zdepth={1} rounded={"false"}>
         <Grid width={200} gap={5}>

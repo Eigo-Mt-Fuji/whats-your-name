@@ -1,7 +1,7 @@
 ---
 
 extends:
-  - eslint:recommended
+#  - eslint:recommended
   - plugin:import/errors
   - plugin:import/warnings
   - plugin:react/recommended
@@ -13,7 +13,7 @@ rules:
   quotes: [1, "double", "avoid-escape"]
   semi: ["error", "always"]
   no-console: 0
-  no-trailing-spaces: 2
+  no-trailing-spaces: 0
   babel/new-cap: 1
   babel/no-invalid-this: 1
   babel/object-curly-spacing: 1

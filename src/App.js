@@ -4,12 +4,12 @@ import "./Custom.css";
 import MyPaper from "./components/MyPaper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import createMuiTheme from "material-ui/styles/createMuiTheme";
-
+import ApiHelper from "./ApiHelper";
 class App extends React.Component {
   render () {
     return (
       <div className="App">
-
+      
         <MuiThemeProvider theme={createMuiTheme({palette: {type: "light"}})}>
           <MyPaper>
             <div className="App-intro" style={{width: "100%"}}>{"You're welcome, here."}</div>
@@ -17,16 +17,16 @@ class App extends React.Component {
         </MuiThemeProvider>
       </div>
     );
-  }
+  };
 
-  // componentDidMount() {
-  //
-  //     let helper = new ApiHelper("/ip.json");
-  //     helper.get().then((json) => {
-  //
-  //         console.log("Response", json);
-  //     });
-  // }
+  componentDidMount() {
+  
+    let helper = new ApiHelper("/ip.json");
+    helper.get().then((json) => {
+    
+      console.log("Response", json);
+    });
+  }
 }
 
 export default App;
