@@ -5,7 +5,8 @@ cache:
   directories:
   - node_modules
 script:
-  - npm test
+  - npm run lint
+  - npm run test
 after_success:
   - git config --global user.name "efg.river"
   - git config --global user.email "efg.river@gmail.com"
