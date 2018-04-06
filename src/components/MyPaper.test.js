@@ -21,7 +21,6 @@ test("render MyPaper without crash", (t) => {
         diagramText:"You->Me: Hello\n",
         diagramTextTitle:"welcome_sequence_diagram_title"
       }}>
-        test
       </MyPaper>
     </MuiThemeProvider>
   );

@@ -18,7 +18,6 @@ class MyPaper extends React.Component {
   
   static propTypes = {
     
-    children: PropTypes.any.isRequired,
     classes: PropTypes.object.isRequired,
     messageProperties: PropTypes.object.isRequired
   };
