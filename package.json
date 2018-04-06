@@ -33,7 +33,7 @@
     "watch:lint": "esw --watch --ext .js --fix .",
     "watch:test": "BABEL_ENV=test NODE_ENV=test ava --watch",
     "eject": "react-scripts eject",
-    "prepush": "npm run lint"
+    "prepush": "npm run build-css && npm run lint"
   },
   "devDependencies": {
     "ava": "^1.0.0-beta.3",
