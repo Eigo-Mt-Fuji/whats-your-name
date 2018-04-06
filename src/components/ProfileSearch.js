@@ -5,7 +5,7 @@ import {withStyles} from "material-ui/styles";
 
 const styles = () => ({
   root: {
-    width: "inherit"
+    width: "50%"
   }
 });
 

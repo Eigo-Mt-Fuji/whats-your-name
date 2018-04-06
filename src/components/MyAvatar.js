@@ -16,10 +16,12 @@ export default class MyAvatar extends React.Component {
     return (
       <Grid direction={"column"} container={true} justify={"flex-start"} alignItems={"flex-start"} spacing={8}>
         <Grid item={true} xs={10} sm={10}>
-          <img alt="avatar" src={this.props.src}/>
+          <img alt="avatar" src={this.props.src} width="120px" height="120px"/>
         </Grid>
-        <Grid item={true} xs={2} sm={2}>
-          <span>{this.props.name}</span>(<span>{this.props.age}</span>)
+        <Grid item={true} xs={2} sm={2} >
+          <div style={{width: "100px"}}>
+            <span>{this.props.name}</span>(<span>{this.props.age}</span>)
+          </div>
         </Grid>
       </Grid>
     );

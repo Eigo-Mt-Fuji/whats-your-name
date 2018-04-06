@@ -28,7 +28,7 @@ class MyPaper extends React.Component {
         <Grid container={true} direction={"column"} spacing={8}>
           <Grid sm={4} item={true} container={true} direction={"row"} spacing={8}>
             <Grid item={true} xs={12} sm={4}>
-              <MyAvatar src={"./images/avatar.jpg"} name={"藤川 英悟"} age={"0x1d"}/>
+              <MyAvatar src={"./images/avatar.jpg"} name={"藤川 英悟"} age={"5"}/>
             </Grid>
             <Grid item={true} xs={12} sm={8}>
               <ProfileSearch id={"search"}></ProfileSearch>

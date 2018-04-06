@@ -6,7 +6,7 @@ import {I18n} from "react-i18next";
 import MyPaper from "./components/MyPaper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import {createMuiTheme} from "material-ui/styles";
-import ApiHelper from "./ApiHelper";
+//import ApiHelper from "./ApiHelper";
 
 class App extends React.Component {
 
@@ -19,6 +19,7 @@ class App extends React.Component {
           {
             (t) => (
               <MuiThemeProvider theme={createMuiTheme({palette: {type: "light"}})}>
+                <div className="App-intro" style={{width: "100%"}}>{t("title")}</div>
                 <MyPaper diagramText={t("welcome_sequence_diagram")}>
                   <div className="App-intro" style={{width: "100%"}}>{t("title")}</div>
                 </MyPaper>
@@ -32,15 +33,15 @@ class App extends React.Component {
   
   componentDidMount() {
     
-    let helper = new ApiHelper("../public/ip.json");
-    helper.get().then((json) => {
-      
-      console.log("Response is", json);
-    }).catch(() => {
-      
-      //console.log("Error args: ", e);
-      //console.error("Error");
-    });
+    // let helper = new ApiHelper("../public/ip.json");
+    // helper.get().then((json) => {
+    //
+    //   console.log("Response is", json);
+    // }).catch(() => {
+    //
+    //   //console.log("Error args: ", e);
+    //   //console.error("Error");
+    // });
   }
 }
 export default App;
