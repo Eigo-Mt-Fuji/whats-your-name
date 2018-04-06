@@ -5,7 +5,10 @@ import {withStyles} from "material-ui/styles";
 
 const styles = () => ({
   root: {
-    width: "50%"
+    marginRight:"20px",
+    width: "100%",
+    minWidth: "200px"
+    
   }
 });
 
@@ -33,10 +36,12 @@ class ProfileSearch extends React.Component {
     const {id, classes} = this.props;
 
     return (
+      
       <TextField
         type="search"
         margin="normal"
-        label="Search field"
+        fullWidth={true}
+        label="Search profile"
         id={id}
         className={classes.root}
       />

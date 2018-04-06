@@ -19,8 +19,11 @@ class App extends React.Component {
           {
             (t) => (
               <MuiThemeProvider theme={createMuiTheme({palette: {type: "light"}})}>
-                <div className="App-intro" style={{width: "100%"}}>{t("title")}</div>
-                <MyPaper diagramText={t("welcome_sequence_diagram")}>
+                <div className="App-intro" style={{width: "100%"}}><h2>{t("title")}</h2></div>
+                <MyPaper messageProperties={{
+                  diagramText:t("welcome_sequence_diagram"),
+                  diagramTextTitle:t("welcome_sequence_diagram_title")
+                }}>
                   <div className="App-intro" style={{width: "100%"}}>{t("title")}</div>
                 </MyPaper>
               </MuiThemeProvider>

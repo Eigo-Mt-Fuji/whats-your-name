@@ -16,7 +16,14 @@ Enzyme.configure({adapter: new Adapter()});
 
 test("render MyPaper without crash", (t) => {
   let wrapper = Enzyme.shallow(
-    <MuiThemeProvider theme={theme}><MyPaper diagramText={"You->Me: Hello\n"}>test</MyPaper></MuiThemeProvider>
+    <MuiThemeProvider theme={theme}>
+      <MyPaper messageProperties={{
+        diagramText:"You->Me: Hello\n",
+        diagramTextTitle:"welcome_sequence_diagram_title"
+      }}>
+        test
+      </MyPaper>
+    </MuiThemeProvider>
   );
   t.true(wrapper.type().displayName == "WithStyles(MyPaper)");
   t.pass();

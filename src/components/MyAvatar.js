@@ -2,6 +2,7 @@ import React from "react";
 
 import PropTypes from "prop-types";
 import Grid from "material-ui/Grid";
+import Avatar from "material-ui/Avatar";
 
 export default class MyAvatar extends React.Component {
 
@@ -14,13 +15,13 @@ export default class MyAvatar extends React.Component {
   render() {
   
     return (
-      <Grid direction={"column"} container={true} justify={"flex-start"} alignItems={"flex-start"} spacing={8}>
-        <Grid item={true} xs={10} sm={10}>
-          <img alt="avatar" src={this.props.src} width="120px" height="120px"/>
+      <Grid direction={"column"} container={true} justify={"center"} alignItems={"center"} spacing={8}>
+        <Grid item={true} xs={10} sm={10} alignItem={"flex-start"}>
+          <Avatar style={{width: 90, height: 100}} alt="avatar" src={this.props.src} />
         </Grid>
-        <Grid item={true} xs={2} sm={2} >
-          <div style={{width: "100px"}}>
-            <span>{this.props.name}</span>(<span>{this.props.age}</span>)
+        <Grid item={true} xs={10} sm={10} alignItem={"flex-start"}>
+          <div style={{width: "max-content",margin: "0 auto", textAlign: "center"}}>
+            {this.props.name}({this.props.age})
           </div>
         </Grid>
       </Grid>

@@ -5,11 +5,13 @@ export default class SequenceDiagramWrapper extends React.Component {
 
     static defaultProps= {
       diagramText: "",
+      diagramTextTitle: "",
       theme: ""
     };
     static propTypes= {
-        diagramText: PropTypes.string.isRequired,
-        theme:PropTypes.string.isRequired
+      diagramText: PropTypes.string.isRequired,
+      diagramTextTitle: PropTypes.string.isRequired,
+      theme: PropTypes.string.isRequired
     };
     onError(error) {
         console.log(error);
@@ -23,13 +25,15 @@ export default class SequenceDiagramWrapper extends React.Component {
     render() {
 
         let style = {
-
-            width: "100%",
-            height: "100%"
+          width: "100%",
+          height: "100%"
         };
 
         return (
-            <SequenceDiagram style={style} input={this.props.diagramText} options={{theme: this.props.theme}} onError={this.onError}/>
+          <div style={style} >
+            <div style={{width:"50%", margin:"0 auto"}} >{this.props.diagramTextTitle}</div>
+            <SequenceDiagram style={{width:"50%", margin:"0 auto"}} input={this.props.diagramText} options={{theme: this.props.theme}} onError={this.onError}/>
+          </div>
         );
     }
 
