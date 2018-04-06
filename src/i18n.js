@@ -3,8 +3,8 @@ import i18n from "i18next";
 import Backend from "i18next-xhr-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
 import {reactI18nextModule} from "react-i18next";
-import enResources from "../public/locales/en/translations";
-import jaResources from "../public/locales/ja/translations";
+import enResources from "./locales/en/translations";
+import jaResources from "./locales/ja/translations";
 
 i18n
   .use(Backend)

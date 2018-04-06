@@ -12,7 +12,7 @@ import App from "./App";
 import i18n from "i18next";
 import Backend from "i18next-xhr-backend";
 import {reactI18nextModule} from "react-i18next";
-import enResources from "../public/locales/en/translations";
+import enResources from "./locales/en/translations";
 
 Enzyme.configure({adapter: new Adapter()});
 
