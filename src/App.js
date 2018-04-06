@@ -17,7 +17,7 @@ class App extends React.Component {
         </MuiThemeProvider>
       </div>
     );
-  };
+  }
   
   componentDidMount() {
     
@@ -25,7 +25,7 @@ class App extends React.Component {
     helper.get().then((json) => {
       
       console.log("Response is", json);
-    }).catch((e) => {
+    }).catch(() => {
       
       //console.log("Error args: ", e);
       //console.error("Error");

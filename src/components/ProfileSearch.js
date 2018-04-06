@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import TextField from 'material-ui/TextField';
-import {withStyles} from 'material-ui/styles';
+import React from "react";
+import PropTypes from "prop-types";
+import TextField from "material-ui/TextField";
+import {withStyles} from "material-ui/styles";
 
-const styles = (theme) => ({
+const styles = () => ({
   root: {
     width: "inherit"
   }
@@ -42,6 +42,6 @@ class ProfileSearch extends React.Component {
       />
     );
   }
-};
+}
 
 export default withStyles(styles)(ProfileSearch);
