@@ -31,7 +31,7 @@ export default class SequenceDiagramWrapper extends React.Component {
 
         return (
           <div style={style} >
-            <div style={{width:"50%", margin:"0 auto"}} >{this.props.diagramTextTitle}</div>
+            <div style={{width:"max-content", margin:"0 auto"}} >{this.props.diagramTextTitle}</div>
             <SequenceDiagram style={{width:"50%", margin:"0 auto"}} input={this.props.diagramText} options={{theme: this.props.theme}} onError={this.onError}/>
           </div>
         );

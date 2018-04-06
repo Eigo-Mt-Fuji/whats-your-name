@@ -1,6 +1,6 @@
 {
   "title": "はじめまして",
-  "welcome_sequence_diagram": "あなた->Site: Choose Introduction\nSite->あなた: My summary profile \nNote right of あなた: More detail , About me\nあなた->Site: Choose category \nSite->あなた: Show topics of the category\nNote right of あなた: be interested in, About me\nあなた->Site: Request meeting\nSite->あなた: You're welcome!!\n",
+  "welcome_sequence_diagram": "You->Site: Visit Site  \nSite->You: Profile summary\nNote right of You: More detail\nYou->Site: Choose category \nSite->You: Recent works\nNote right of You: If You want\nYou->Site: Request meeting\nSite->You: You're welcome!!\n",
   "welcome_sequence_diagram_title":"サイトの使い方　　"
 }
 

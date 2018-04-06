@@ -9,8 +9,7 @@ import ProfileSearch from "./ProfileSearch";
 
 const styles = () => ({
   root: {
-    
-    width: "inherit"
+    width: "95%"
   }
 });
 
