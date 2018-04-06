@@ -1,24 +1,26 @@
 import React from "react";
-import Grid from "react-css-grid";
 
 import PropTypes from "prop-types";
+import Grid from "material-ui/Grid";
 
 export default class MyAvatar extends React.Component {
 
   static propTypes = {
     src: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired,
+    age: PropTypes.string.isRequired,
   }
 
   render() {
-    // 横幅が664(320 * 2(number of div) + (2(number of div) - 1) * 24) を超えたら回りこみ
+  
     return (
-      <Grid width={160} gap={5}>
-        <div>
+      <Grid direction={"column"} container={true} justify={"flex-start"} alignItems={"flex-start"} spacing={8}>
+        <Grid item={true} xs={10} sm={10}>
           <img alt="avatar" src={this.props.src}/>
-        </div>
-        <div><span>{this.props.name}</span>(<span>{this.props.age}</span>)</div>
+        </Grid>
+        <Grid item={true} xs={2} sm={2}>
+          <span>{this.props.name}</span>(<span>{this.props.age}</span>)
+        </Grid>
       </Grid>
     );
   }

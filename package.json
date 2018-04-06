@@ -25,8 +25,8 @@
     "start": "npm-run-all -p build-css watch-css start-js",
     "deploy": "npm run build && gh-pages -d build",
     "test": "BABEL_ENV=test NODE_ENV=test ava",
-    "lint": "eslint --fix . .",
-    "watch:lint": "esw --fix --watch --changed src/**",
+    "lint": "eslint --ext=js --fix . .",
+    "watch:lint": "esw --watch --changed --ext .js --fix .",
     "watch:test": "BABEL_ENV=test NODE_ENV=test ava --watch",
     "eject": "react-scripts eject",
     "prepush": "npm run lint"
