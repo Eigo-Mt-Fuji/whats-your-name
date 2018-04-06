@@ -18,7 +18,8 @@ class MyPaper extends React.Component {
   static propTypes = {
     
     children: PropTypes.any.isRequired,
-    classes: PropTypes.object.isRequired
+    classes: PropTypes.object.isRequired,
+    diagramText: PropTypes.string.isRequired
   };
   render() {
     const {classes} = this.props;
@@ -36,16 +37,7 @@ class MyPaper extends React.Component {
           
           <Grid item={true} xs={4} sm={4} container={true} direction={"row"} spacing={8}>
             <Grid item={true} xs={12} sm={12}>
-              <SequenceDiagramWrapper theme={"hand"} diagramText={
-                "You->This Site: Choose Introduction\n" +
-                "This Site->You: My summary profile \n" +
-                "Note right of You: More detail , About me\n" +
-                "You->This Site: Choose category \n" +
-                "This Site->You: Show topics of the category\n" +
-                "Note right of You: be interested in, About me\n" +
-                "You->This Site: Request meeting\n" +
-                "This Site->You: You're welcome!!\n"
-              }/>
+              <SequenceDiagramWrapper theme={"hand"} diagramText={this.props.diagramText}/>
             </Grid>
           </Grid>
         </Grid>

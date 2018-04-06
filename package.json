@@ -15,7 +15,11 @@
     "react-scripts": "next",
     "react-sequence-diagram": "0.0.11",
     "css-loader": "0.28.11",
-    "whatwg-fetch": "^2.0.4"
+    "whatwg-fetch": "^2.0.4",
+    "react-i18next":"7.5.1",
+    "i18next-xhr-backend":"1.5.1",
+    "i18next-browser-languagedetector":"2.2.0",
+    "i18next": "11.0.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",

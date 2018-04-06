@@ -1,20 +1,31 @@
 import React from "react";
 import "./App.css";
 import "./Custom.css";
+import {I18n} from "react-i18next";
+
 import MyPaper from "./components/MyPaper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import {createMuiTheme} from "material-ui/styles";
 import ApiHelper from "./ApiHelper";
+
 class App extends React.Component {
+
   render() {
     return (
+    
       <div className="App">
-        
-        <MuiThemeProvider theme={createMuiTheme({palette: {type: "light"}})}>
-          <MyPaper>
-            <div className="App-intro" style={{width: "100%"}}>{"You're welcome, here."}</div>
-          </MyPaper>
-        </MuiThemeProvider>
+      
+        <I18n ns="translations">
+          {
+            (t) => (
+              <MuiThemeProvider theme={createMuiTheme({palette: {type: "light"}})}>
+                <MyPaper diagramText={t("welcome_sequence_diagram")}>
+                  <div className="App-intro" style={{width: "100%"}}>{t("title")}</div>
+                </MyPaper>
+              </MuiThemeProvider>
+            )
+          }
+        </I18n>
       </div>
     );
   }
