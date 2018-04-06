@@ -1,5 +1,0 @@
-{
-  "title": "You ko-so.",
-  "welcome_sequence_diagram": "You->This Site: Choose Introduction\nThis Site->You: My summary profile \nNote right of You: More detail , About me\nYou->This Site: Choose category \nThis Site->You: Show topics of the category\nNote right of You: be interested in, About me\nYou->This Site: Request meeting\nThis Site->You: You're welcome!!\n"
-}
-
