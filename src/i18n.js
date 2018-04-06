@@ -18,9 +18,12 @@ i18n
     defaultNS: "translations",
     backend: {
       crossDomain: false,
-      ajax: function(url, options, callback) {
+      ajax: function(
+        url,
+        /*eslint no-unused-vars: "off" */options,
+        callback) {
         
-        if(url == "/locales/ja/translations.json") {
+        if(url === "/locales/ja/translations.json") {
           
           callback(JSON.stringify(jaResources), {status: "200"});
         }else {
