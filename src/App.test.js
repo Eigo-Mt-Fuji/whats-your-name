@@ -1,6 +1,6 @@
-// eslint-disable-line
+// eslint-disable-line no-unused-vars
 import React from "react";
-// eslint-disable-line
+// eslint-disable-line no-unused-vars
 import PropTypes from "prop-types";
 import createMuiTheme from "material-ui/styles/createMuiTheme";
 
@@ -42,7 +42,7 @@ i18n
     }
   });
 
-// eslint-disable-line
+// eslint-disable-line no-unused-vars
 const muiTheme = createMuiTheme({palette: {type: "light"}});
 
 test("renders without crashing", t => {
