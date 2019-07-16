@@ -1,5 +1,3 @@
 {
-  "title": "You're welcome, here.",
-  "welcome_sequence_diagram": "You->Site: Visit Site  \nSite->You: Profile summary\nNote right of You: More detail\nYou->Site: Choose category \nSite->You: Recent works\nNote right of You: If you want\nYou->Site: Request meeting\nSite->You: You're welcome!!\n",
-  "welcome_sequence_diagram_title":"Heart-ful Diagram　"
+  "title": "React QR Reader Sample"
 }
