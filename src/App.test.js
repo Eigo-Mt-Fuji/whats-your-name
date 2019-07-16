@@ -9,7 +9,6 @@ import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import "@babel/register";
 
-/*eslint no-unused-vars: "off"*/
 import i18n from "i18next";
 import Backend from "i18next-xhr-backend";
 import {reactI18nextModule} from "react-i18next";
