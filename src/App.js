@@ -1,9 +1,8 @@
 import React from "react";
 import "./App.css";
 import "./Custom.css";
+import AwesomeQrReader from "./components/AwesomeQrReader"
 import {I18n} from "react-i18next";
-
-import MyPaper from "./components/MyPaper";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import {createMuiTheme} from "material-ui/styles";
 //import ApiHelper from "./ApiHelper";
@@ -20,11 +19,7 @@ class App extends React.Component {
             (t) => (
               <MuiThemeProvider theme={createMuiTheme({palette: {type: "light"}})}>
                 <div className="App-intro" style={{width: "100%"}}><h2>{t("title")}</h2></div>
-                <MyPaper messageProperties={{
-                  diagramText:t("welcome_sequence_diagram"),
-                  diagramTextTitle:t("welcome_sequence_diagram_title")
-                }}>
-                </MyPaper>
+                <AwesomeQrReader />
               </MuiThemeProvider>
             )
           }
