@@ -1,6 +1,6 @@
-// eslint-disable-line no-unused-vars
+/*eslint no-unused-vars: "off"*/
 import React from "react";
-// eslint-disable-line no-unused-vars
+/*eslint no-unused-vars: "off"*/
 import PropTypes from "prop-types";
 import createMuiTheme from "material-ui/styles/createMuiTheme";
 
@@ -9,7 +9,7 @@ import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import "@babel/register";
 
-/*eslint import/no-named-as-default-member: "off"*/
+/*eslint no-unused-vars: "off"*/
 import i18n from "i18next";
 import Backend from "i18next-xhr-backend";
 import {reactI18nextModule} from "react-i18next";
@@ -42,7 +42,7 @@ i18n
     }
   });
 
-// eslint-disable-line no-unused-vars
+/*eslint no-unused-vars: "off"*/
 const muiTheme = createMuiTheme({palette: {type: "light"}});
 
 test("renders without crashing", t => {
