@@ -20,7 +20,9 @@
     "i18next-xhr-backend":"1.5.1",
     "i18next-browser-languagedetector":"2.2.0",
     "i18next": "11.0.0",
-    "react-qr-reader":"~2.2.1"
+    "react-qr-reader":"~2.2.1",
+    "url-parse":"^1.4.7",
+    "querystringify": "^2.1.1"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
