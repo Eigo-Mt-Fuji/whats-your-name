@@ -3,29 +3,55 @@ import QrReader from "react-qr-reader";
 
 export default class AwesomeQrReader extends Component {
   state = {
-    result: "No result"
+    result: "No result",
+    startTimestamp: -1,
+    elapsed: 0
   }
 
   handleScan = data => {
     if (data) {
       this.setState({
-        result: data
+        result: data,
+        elapsed: (new Date()).getTime() - this.state.startTimestamp
       });
     }
   }
   handleError = err => {
     console.error(err);
   }
+
+  startDetect = () => {
+
+     this.setState({
+       result: "",
+       startTimestamp: (new Date()).getTime(),
+       elapsed: 0
+     })
+  }
+
+  componentDidMount = () => {
+
+     this.startDetect();
+  }
+
   render() {
     return (
       <div>
+        <div>
+            <button onclick={this.startDetect}>START</button>
+        </div>
+        <div>
+           <span>Result: </span>&nbsp;<span>{this.state.result}</span>
+        </div>
+        <div>
+           <span>Elapsed: </span>&nbsp;<span>{this.state.elapsed}</span>
+        </div>       
         <QrReader
-          delay={300}
+          delay={100}
           onError={this.handleError}
           onScan={this.handleScan}
-          style={{width: "100%"}}
+          style={{width: "50%"}}
         />
-        <p>{this.state.result}</p>
       </div>
     );
   }
